@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#fcfbfd"
+    tools:context=".fragments.QuizInterface">
+
+    <TextView
+        android:id="@+id/questionNumber"
+        android:layout_width="match_parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/timeAndQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionNumber">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress_circular"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:progress="0"
+            app:indicatorColor="@color/appOrange"
+            app:indicatorSize="80dp"
+            app:trackColor="@color/appDarkBlue" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress_circular">
+
+            <TextView
+                android:id="@+id/questionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/timeShower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/progress_circular"
+            android:layout_alignTop="@+id/progress_circular"
+            android:layout_alignEnd="@+id/progress_circular"
+            android:layout_alignBottom="@+id/progress_circular"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeAndQuestion">
+
+        <TextView
+            android:tag="True"
+            android:id="@+id/option1"
+            style="@style/clickableTextView"/>
+
+        <TextView
+            android:id="@+id/option2"
+            style="@style/clickableTextView"
+            android:layout_below="@id/option1" />
+
+        <TextView
+            android:id="@+id/option3"
+            style="@style/clickableTextView"
+            android:layout_below="@id/option2" />
+
+        <TextView
+            android:id="@+id/option4"
+            style="@style/clickableTextView"
+            android:layout_below="@id/option3" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

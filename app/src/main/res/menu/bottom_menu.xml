@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Discover"
+        android:icon="@drawable/ic_discover"
+        android:id="@+id/discover"
+        />
+    <item
+        android:title="Categories"
+        android:icon="@drawable/ic_menu"
+        android:id="@+id/categories"
+        />
+    <item
+        android:title="Rank"
+        android:icon="@drawable/ic_rank"
+        android:id="@+id/rank"
+        />
+    <item
+        android:title="Results"
+        android:icon="@drawable/ic_user"
+        android:id="@+id/results"
+        />
+    <item
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"
+        android:id="@+id/settings"
+        />
+</menu>
