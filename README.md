@@ -1,6 +1,7 @@
 # GameEtub
 Modern quiz application written in Java. As a backend service I use Python, it is also in my github Account you can look at. In application there are login and register systems, quizes are coming from API,
 and all the users' results is stored in Firebase. You just can download it and play with your friends
+<a href="/app-debug.apk" download>Download apk file</a>
 # Images
 <img width="300" src="/thumbs/1.png"/>&nbsp;
 <img width="300" src="/thumbs/2.png"/>&nbsp;
